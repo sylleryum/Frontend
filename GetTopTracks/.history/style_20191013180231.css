@@ -1,0 +1,79 @@
+.footer-clear {
+     width: 100%;
+     position: fixed;
+     bottom: 0%;
+}
+
+.background-master {
+     background: url(images/bb.png) repeat;
+}
+
+button:hover {
+     background-color: #a75e3a!important;
+     text-decoration: underline!important;
+}
+
+input[type="radio"] {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+   }
+
+.h-100 {
+     min-height: 100vh;
+}
+
+.h-95 {
+     min-height: 95vh;
+}
+
+.h-80 {
+     min-height: 80vh;
+     max-height: 90vh;
+}
+
+.bg-1 {
+     background: #6dd3ce!important
+}
+
+.bg-2 {
+     background: #c8e9a0!important
+}
+
+.bg-3 {
+     background: #f7a278!important
+}
+
+.bg-4 {
+     background: #a13d63!important
+}
+
+.bg-5 {
+     background: #351e29!important
+}
+
+.text-1 {
+     color: #6dd3ce!important
+}
+
+.text-2 {
+     color: #c8e9a0!important
+}
+
+.text-3 {
+     color: #f7a278!important
+}
+
+.text-4 {
+     color: #a13d63!important
+}
+
+.text-5 {
+     color: #351e29!important
+}
+
+@media screen and (min-width: 767px) {
+     .small-padding {
+          padding-left: 2px!important;
+     }
+}

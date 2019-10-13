@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+     <title>Get top tracks from Artists and albums</title>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <!-- main CSS-->
+     <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="background-master">
+     <form action="searchTrack" id="submit-btn" onsubmit="return validation()">
+          <div class="container-fluid h-97">
+               <div class="row align-items-center justify-content-center h-97">
+                    <div class="h-80 col-md-10 bg-4 text-1 rounded-lg pl-4 pr-4 pt-2 overflow-auto"  id="internal-container">
+                    
+                         <div class="row main-select pb-1 justify-content-center">
+                              <label><input type="radio" id="rNew" name="playlistRadio" value="new"
+                                   onchange="radioChecker()">New
+                              playlist&nbsp;&nbsp;&nbsp;</label>
+                              <label><input type="radio" id="rExisting" name="playlistRadio" value="existing"
+                                   onchange="radioChecker()">Existing
+                              playlist</label>
+                         </div>
+                         <div class="row main-playlist pb-2 justify-content-center">
+                              <div id="new-playlist" class="block-style">
+                                   Playlist name: <input type="text" class="rounded-lg border-0 bg-5 text-1" id="playlistName"
+                                        name="playlistName" />
+                              </div>
+                              <div id="existing-playlist" class="block-style">
+                                   <span>Your playlists:</span>
+                                   <select name="selectPlaylist" class="rounded-lg border-0 bg-5 text-1">
+                                        <option>playlist 1</option>
+                                        <option>playlist 2</option>
+                                        <option>playlist 3</option>
+                                        <option>playlist 4</option>
+                                        <!-- <c:forEach var="items" items="${playlists}">
+                                        <option value="${items.getId()}">${items.getName()}</option>
+                                   </c:forEach> -->
+                                   </select>
+                              </div>
+                         </div>
+                         <div class="row pb-2 justify-content-center">
+                              Search Artists or/and Albums:
+                         </div>
+                         <div class="row main-textarea form-group pr-1 mb-0 pb-2">
+                              <div class="col-md-6 p-0 mb-1">
+                                   <textarea class="textarea-search form-control md-textarea bg-5 text-1 border-0" rows="5" id="searchNameArtist"
+                                        name="searchNameArtist" placeholder="Paste desired artists here"></textarea>
+                              </div>
+                              <div class="col-md-6 p-0 small-padding">
+                                   <textarea class="textarea-search form-control md-textarea bg-5 text-1 border-0" rows="5" id="searchNameAlbum"
+                                        name="searchNameAlbum" placeholder="Paste desired albums here"></textarea>
+                              </div>
+                         </div>
+                         <div class="row track-amount pb-2 justify-content-center text-center">
+                              <label><input type="radio" id="rAmount1" name="playlistRadio" value="rAmount2" onchange="">1 track&nbsp;&nbsp;&nbsp;</label>
+                              <label><input type="radio" id="rAmount2" name="playlistRadio" value="rAmount2" onchange="">2 tracks&nbsp;&nbsp;&nbsp;</label>
+                              <label><input type="radio" id="rAmount3" name="playlistRadio" value="rAmount3" checked onchange="">3 tracks&nbsp;&nbsp;&nbsp;</label>
+                              <label><input type="radio" id="rAmount4" name="playlistRadio" value="rAmount4" onchange="">4 tracks&nbsp;&nbsp;&nbsp;</label>
+                              <label><input type="radio" id="rAmount5" name="playlistRadio" value="rAmount4" onchange="">5 tracks&nbsp;&nbsp;&nbsp;</label>
+                         </div>
+                         <div class="row main-go pb-2 justify-content-center">
+                              <button type="submit" class="btn bg-2 btn-sm btn-block text-uppercase font-weight-bold text-4" id="submit-button">
+                                   Give me my playlist!
+                              </button>
+                         </div>
+
+                         <div class="row results-menu">
+                              <div class="success col-md-6 p-0">
+                                   <h4>Songs added</h4>
+                                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, saepe! Nemo voluptates in iusto vel deserunt vero facere ex hic nam perspiciatis alias velit, porro veniam pariatur veritatis sapiente! Doloribus dolorem laudantium dolores, iste, tempora laboriosam maxime, ut quaerat blanditiis repellendus deserunt iure amet reprehenderit optio? Itaque officia cupiditate ea?
+                              </div>
+                              <div class="failure col-md-6 p-0">
+                                   <h4>Songs not found</h4>
+                                   
+                              </div>
+                         </div>
+
+                    </div>
+
+               </div>
+
+          </div>
+     </form>
+     <footer class="text-center m-0 p-0 bg-4 text-1 footer-clear">
+          <h6 class="p-0 m-0 text-w">Find more information and source code at: <a href="https://github.com/sylleryum/">
+                    https://github.com/sylleryum/</a></h6>
+
+     </footer>
+
+
+
+
+
+
+
+     <!-- Optional JavaScript -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>

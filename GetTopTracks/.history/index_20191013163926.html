@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+     <title>Get top tracks from Artists and albums</title>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <!-- main CSS-->
+     <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="background-master">
+          <form action="searchTrack" id="submit-btn" onsubmit="return validation()">
+     <div class="container-fluid h-95">
+          <div class="row align-items-center justify-content-center h-95">
+               <div class="h-80 col col-md-10 bg-4 text-1 rounded-lg pl-4 pt-2 overflow-auto  id="internal-container">
+                    <div class="row main-select">
+                         <input type="radio" id="rNew" name="playlistRadio" value="new" onchange="radioChecker()">New
+                         playlist
+                         <input type="radio" id="rExisting" name="playlistRadio" value="existing"
+                              onchange="radioChecker()">Existing
+                         playlist
+                    </div>
+                    <div class="row main-playlist">
+                         <div id="new-playlist" class="block-style">
+                              Playlist name: <input type="text" id="playlistName" name="playlistName" />
+                         </div>
+                         <div id="existing-playlist" class="block-style">
+                              <span>Your playlists:</span>
+                              <select name="selectPlaylist">
+                                   <option>playlist 1</option>
+                                   <option>playlist 2</option>
+                                   <option>playlist 3</option>
+                                   <option>playlist 4</option>
+                                   <!-- <c:forEach var="items" items="${playlists}">
+                                        <option value="${items.getId()}">${items.getName()}</option>
+                                   </c:forEach> -->
+                              </select>
+                         </div>
+                    </div>
+                    <div class="row">
+                         Search tracks:
+                    </div>
+                    <div class="row main-textarea form-group p">
+                         <div class="col-md-6 p-0">
+                              <textarea class="textarea-search form-control md-textarea" id="searchNameArtist"
+                                   name="searchNameArtist" placeholder="Paste desired artists here"></textarea>
+                         </div>
+                         <div class="col-md-6 p-0">
+                              <textarea class="textarea-search form-control md-textarea" id="searchNameAlbum"
+                                   name="searchNameAlbum" placeholder="Paste desired albums here"></textarea>
+                         </div>
+                    </div>
+                    <div class="row track-amount">
+                         <input type="radio" id="rAmount2" name="playlistRadio" value="rAmount2" onchange="">2
+                         <input type="radio" id="rAmount3" name="playlistRadio" value="rAmount3" onchange="">3
+                         <input type="radio" id="rAmount4" name="playlistRadio" value="rAmount4" onchange="">4
+                    </div>
+                    <div class="row main-go">
+                         <button type="submit" id="submit-button">
+                              Go
+                         </button>
+                    </div>
+
+                    <div class="row results-menu">
+                         <div class="success col-md-6">
+                              <h4>Songs added</h4>
+
+                         </div>
+                         <div class="failure col-md-6">
+                              <h4>Songs not found</h4>
+
+                         </div>
+                    </div>
+
+               </div>
+
+          </div>
+
+     </div>
+     </form>
+     <footer class="text-center m-0 p-0 bg-4 footer-clear">
+          <h6 class="p-0 m-0 text-w">Find more information and source code at: <a href="https://github.com/sylleryum/">
+                    https://github.com/sylleryum/</a></h6>
+
+     </footer>
+
+
+
+
+
+
+
+     <!-- Optional JavaScript -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>

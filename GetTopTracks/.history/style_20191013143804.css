@@ -1,0 +1,17 @@
+.background-master{
+     background: url(images/bb.png) repeat;
+}
+
+.h-100{
+     min-height: 100vh;
+ }
+
+.h-80{
+     min-height: 80vh;
+ }
+
+ .bg-1{background: #6dd3ce}
+ .bg-2{background: #c8e9a0}
+ .bg-3{background: #f7a278}
+ .bg-4{background: #a13d63}
+ .bg-5{background: #351e29}

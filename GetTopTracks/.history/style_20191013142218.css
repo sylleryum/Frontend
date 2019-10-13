@@ -1,0 +1,11 @@
+.background-master{
+     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQYlWNYaJv8f6Ft8n8GQoBohRRppsgWOllDH1sAh3okAQJRbOkAAAAASUVORK5CYII=) repeat;
+}
+
+.h-100{
+     min-height: 100vh;
+ }
+
+.h-80{
+     min-height: 80vh;
+ }

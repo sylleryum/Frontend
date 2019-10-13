@@ -1,0 +1,24 @@
+.background-master{
+     background: url(images/bb.png) repeat;
+}
+
+.h-100{
+     min-height: 100vh;
+ }
+
+.h-80{
+     min-height: 80vh;
+ }
+
+ .bg-1{background: #6dd3ce!important}
+ .bg-2{background: #c8e9a0!important}
+ .bg-3{background: #f7a278!important}
+ .bg-4{background: #a13d63!important}
+ .bg-5{background: #351e29!important}
+
+.text-w{color: #6dd3ce!important}
+.text-1{color: #B3DDD2!important;}
+.text-2{color: #80BEAF!important;}
+.text-3{color: #D1DCE2!important;}
+.text-4{color: #F2B893!important;}
+.text-5{color: #EE9C69!important;}
